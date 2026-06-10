@@ -34,11 +34,33 @@
 
 ## Git branches
 
-| Command                          | What it does                      |
-| -------------------------------- | --------------------------------- |
-| `git checkout -b branch-name`    | Create and switch to a new branch |
-| `git branch`                     | List all branches                 |
-| `git push -u origin branch-name` | Push a new branch to GitHub       |
+A branch lets you split from the main line of development and work
+independently without affecting the main codebase.
+
+| Command                      | What it does                         |
+| ---------------------------- | ------------------------------------ |
+| `git switch -c <branchname>` | Create a new branch and switch to it |
+| `git switch <branchname>`    | Switch to an existing branch         |
+| `git branch`                 | List local branches                  |
+| `git branch -a`              | List all branches (local and remote) |
+| `git branch -d <branchname>` | Delete a branch                      |
+
+## Pull requests (PR)
+
+A PR is a request to merge one branch into another. Other developers
+review the code, suggest changes, and approve before merging.
+
+### Basic PR workflow
+
+1. `git switch -c <branchname>` — create and switch to a new branch
+2. Make your changes and commit them
+3. `git push -u origin <branchname>` — push the branch to GitHub
+4. Create a pull request on GitHub
+5. Share with your team for review
+6. Implement feedback, push again if needed
+7. Merge the pull request into main
+8. `git checkout main` then `git pull` — sync your local machine
+9. Delete the branch on GitHub and locally
 
 ## File states in Git
 
